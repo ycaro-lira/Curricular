@@ -28,6 +28,7 @@ O Projeto Curricular tem como objetivo principal fornecer uma plataforma intuiti
 
 - Spring Framework (Spring Boot, Spring MVC)
 - Java Persistence API (JPA) para integração com o banco de dados
+- Spring Security
 - Thymeleaf para templates HTML
 - Bootstrap
 - JavaScript
