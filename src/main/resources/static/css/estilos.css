@@ -1,0 +1,102 @@
+body {
+            padding-top: 56px; /* Ajusta o padding para a barra de navegação fixa no topo */
+            font-family: 'Arial',fantasy;
+        }
+ 
+        .navbar {
+            background-color:#fff;
+    
+        }
+ 
+        .navbar-brand img {
+            max-height: 70px; /* Ajusta a altura do logo conforme necessário */
+        }
+ 
+        .main-bg {
+            background-image: url('https://i.im.ge/2023/11/14/ArL1WS.curriculo.jpg');
+            background-size:cover;
+            color:darkorange;
+            text-align: center;
+         
+           padding: 300px 0;
+        }
+ 
+        .main-bg h2 {
+			
+            font-size: 3em;
+        }
+ 
+        .sub {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+ 
+        .textomain {
+            font-size: 1.2em;
+        }
+ 
+        .diferenciais {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+ 
+        .diferenciais h2 {
+            color: #17a2b8;
+        }
+ 
+        .box-icone-single {
+            margin-bottom: 30px;
+        }
+ 
+        .inscricao {
+            background-color: #17a2b8;
+            color: #fff;
+            padding: 80px 0;
+        }
+        
+        .formulariocad {
+			margin-top: 100px;
+			margin-bottom: 60px;
+		}
+ 
+        .inscricao-texto {
+            font-size: 2em;
+        }
+ 
+        .inscricao-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .user-avatar {
+			width: 150px;
+			margin-bottom: 15px;
+		}
+ 
+        .cards {
+            padding: 80px 0;
+        }
+ 
+        .card-single {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+ 
+        .card-single img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+ 
+        .footer1 {
+            background-color: #343a40;
+            color: #fff;
+            padding: 80px 0;
+        }
+ 
+        .footer2 {
+            background-color: #212529;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Analistas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="/css/estilolistar.css">
+ 
+</head>
+<body>
+
+<div class="container">
+    <h2>Lista de Analistas</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Empresa</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="analista : ${analistas}">
+            <td th:text="${analista.id}"></td>
+            <td th:text="${analista.nome}"></td>
+            <td th:text="${analista.email}"></td>
+            <td th:text="${analista.empresa}"></td>
+            <td>
+                <a class="btn btn-primary" th:href="@{/analistas/editar/{id}(id=${analista.id})}">Editar</a>
+                <a class="btn btn-danger" th:href="@{/analistas/deletar/{id}(id=${analista.id})}">Deletar</a>
+                <a class="btn btn-success" th:href="@{/analistas/cadastrar}">Cadastrar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

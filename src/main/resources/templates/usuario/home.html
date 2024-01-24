@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout (~{::title}, ~{::main}, _, ~{::scripts})}">
+
+<head>
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8dQnCXRq12v56NXPge08e2NCbPb1zhP" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Profissão</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="usuario : ${usuarios}">
+                                    <td th:text="${usuario.id}">1</td>
+                                    <td th:text="${usuario.nome}">Nome do usuário</td>
+                                    <td th:text="${usuario.email}">usuario@example.com</td>
+                                    <td th:text="${usuario.profissao}">profissão</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a type="button" data-toggle="popover" data-placement="top"
+                                                data-content="Marcar" data-trigger="hover" class="btn btn-success"
+                                                id="marcarButton" onclick="toggleButton(this)">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                            <a type="button" data-toggle="popover" data-placement="top"
+                                                data-content="Analisando" data-trigger="hover" class="btn btn-info"
+                                                id="analisandoButton"  onclick="toggleButton(this)">
+                                                <i class="fas fa-spinner"></i>
+                                            </a>
+                                          </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <th:block th:fragment="scripts">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyA8dQnCXRq12v56NXPge08e2NCbPb1zhP"
+            crossorigin="anonymous"></script>
+
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+
+            function toggleButton(button) {
+                // Adiciona ou remove a classe 'active' para o efeito visual
+                button.classList.toggle("active");
+            }
+        </script>
+        <style>
+            
+            .btn-group a.btn {
+                background-color: transparent;
+                color: #fff;
+            }
+
+            
+            .btn-group a.btn.active {
+                background-color: #28a745;
+            }
+        </style>
+    </th:block>
+</body>
+
+</html>

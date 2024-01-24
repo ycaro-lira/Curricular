@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="/css/estilos.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+
+	<!-- Adicionando os links para os estilos do Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofT38P5iZIc1Mq2PkkFk5t+E1pbc4p5b9" crossorigin="anonymous">
+
+</head>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="/home.html">
+			<img src="https://i.im.ge/2023/11/14/ArIVLC.Logo.jpg" alt="Logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+
+							<a class="nav-link" href="/home.html">
+								<i class="fas fa-home"></i>
+								Página Inicial
+
+							</a>
+						</li>
+						<!-- Tornar-se Analista com ícone de usuário -->
+						<li class="nav-item">
+							<a class="nav-link" href="/analistas/cadastrar">
+								<i class="fas fa-user-plus"></i> Tornar-se Analista
+							</a>
+						</li>
+
+						<!-- Tornar-se Usuário com ícone de usuário -->
+						<li class="nav-item">
+							<a class="nav-link" href="/usuarios/cadastrar">
+								<i class="fas fa-user"></i> Tornar-se Usuário
+							</a>
+						</li>
+
+						<!-- Dicas com ícone de lâmpada -->
+						<li class="nav-item">
+							<a class="nav-link" href="/guia.html">
+								<i class="fas fa-lightbulb"></i> Dicas
+							</a>
+						</li>
+						<li class="nav-item ml-3">
+                    <a class="nav-link" href="/login">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<body class="bg-info d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+
+	<div class="card p-4">
+		<h2 class="text-center mb-4">Login</h2>
+
+		<form th:action="@{/login}" method="post">
+			<!-- Campos do formulário -->
+			<div class="form-group">
+    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+    <input type="email" id="email" name="username" class="form-control" required>
+</div>
+
+<div class="form-group">
+    <label for="senha"><i class="fas fa-lock"></i> Senha:</label>
+    <input type="password" id="senha" name="password" class="form-control" required>
+</div>
+
+			<button type="submit" class="btn btn-light btn-block">Entrar</button>
+		</form>
+		<p class="text-center mt-3">
+        Não tem uma conta? <a href="/analistas/cadastrar">Inscrição</a>.
+   </p>
+	</div>
+
+	<!-- Adicionando os scripts do Bootstrap (opcional, mas pode ser necessário para alguns recursos do Bootstrap) -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		document.querySelector('nav.menu-mobile h2').addEventListener('click', function () {
+			document.querySelector('nav.menu-mobile ul').classList.toggle('d-none');
+		});
+	</script>
+
+
+</body>
+
+</html>

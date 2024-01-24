@@ -1,0 +1,38 @@
+<!-- Main Sidebar Container -->
+<aside th:fragment="aside" class="main-sidebar sidebar-dark-primary elevation-4 bg-primary">
+	<!-- Brand Logo -->
+	<a th:href="@{/}" class="brand-link">
+		<span class="brand-text font-weight-light">Curricular</span>
+	</a>
+
+
+	<!-- Sidebar Menu -->
+	<nav class="mt-2">
+		<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<i class="nav-icon fas fa-users"></i>
+					<p>
+						Usuários
+						<i class="fas fa-angle-left right"></i>
+					</p>
+				</a>
+				<ul class="nav nav-treeview">
+
+					<li class="nav-item">
+						<a th:href="@{/usuarios}" class="nav-link">
+							<i class="fas fa-table nav-icon"></i>
+							<p>Lista de Usuários</p>
+						</a>
+					</li>
+			</li>
+		</ul>
+		</li>
+		</ul>
+		</li>
+		</ul>
+	</nav>
+	<!-- /.sidebar-menu -->
+	</div>
+	<!-- /.sidebar -->
+</aside>
