@@ -1,5 +1,8 @@
 # Projeto Curricular
 
+[Link de Deploy](https://curricular-site.onrender.com/home.html)
+
+
 ## Visão Geral
 
 O Projeto Curricular é uma plataforma online dedicada a auxiliar os usuários na criação e aprimoramento de currículos, proporcionando uma interação direta com analistas experientes na área de contratação. A aplicação visa facilitar o processo de construção de currículos de qualidade, melhorando as chances dos usuários no mercado de trabalho.
